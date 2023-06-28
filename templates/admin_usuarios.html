@@ -1,0 +1,252 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrar usuarios</title>
+  {% comment %} <link rel="stylesheet" href="{% static 'css/carrito.css' %}"> {% endcomment %}
+  <link rel="stylesheet" href="{% static 'css/admin_usuarios.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="icon" href="{% static 'img/icon.png' %}">
+
+  
+
+  
+</head>
+<body>
+  {% comment %} <script src="js/nav.js"></script> {% endcomment %}
+    <div class="card text-center" >
+        
+      <div class="card-header" id="targett-div">
+        {% include 'index_sin_registrar.html' %}
+      </div> 
+            
+    </div> 
+
+    
+ 
+
+ <!--aqui el listado  -->
+ <div class="carda">
+    <!-- <div class="card-header"> listado</div> -->
+    <div class="container ">
+        <h4 class="card-title">usuarios</h4>
+        <br>
+        <br>
+        <!-- <form enctype="multipart/form-data" method="post"> -->
+          <!-- {% csrf_token %} -->
+          <!-- <div class="mb-3">
+            <label for="" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre">
+          </div>
+        </form> -->
+        <form action="" class="formulario" method="post" id="formulario" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="user-details">
+            <div class="input-box">
+              <!-- <span class="details">Nombre</span> -->
+              <label  for="" class="details form-label">ID</label>
+              <input name="id_usuario" id="id_usuario" type="text" placeholder="Ingrese un id" required id="id">
+            </div>
+            <!-- aqui va el rol usuario con botones de opcion en circulo -->
+            <div class="input-box">
+              <!-- <span class="details">Nombre</span> -->
+              <!-- <label for="" class="details form-label">Rol usuario</label>
+              <input type="text" placeholder="Ingrese un nombre" required> -->
+              <div class="gender-details">
+                <input name="rol" type="radio" value="0" name="gender" id="dot-1">
+                <input name="rol" type="radio" value="1" name="gender" id="dot-2">
+                <!-- <input type="radio" name="gender" id="dot-3"> -->
+                <span class="gender-title">Rol usuario</span>
+                <div class="category">
+                  <label for="dot-1">
+                    <span class="dot one"></span>
+                    <span class="gender">Cliente</span>
+                  </label>
+                  <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="gender">Administrador</span>
+                  </label>
+                </div>
+              </div>
+              
+            </div>
+            <div class="input-box">
+              <!-- <span class="details">Categoria</span> -->
+              <label for="" class=" details form-label">RUT</label>
+              <input name="rut" type="text" name="rut" placeholder="Ingrese el rut" required id="rut">
+            </div>
+            <div class="input-box">
+              <!-- <span class="details">Cantidad</span> -->
+              <label for="" class=" details form-label">Nombre</label>
+              <input name="nombre" type="text" placeholder="Ingrese un nombre" required id="nombre">
+            </div>
+            <div class="input-box">
+              <!-- <span class="details">Imagen</span> -->
+              <label for="" class=" details form-label">Apellido</label>
+              <input name="apellido" type="text" placeholder="Seleccione un apellido" required id="apellido">
+            </div>
+            <div class="input-box">
+              <!-- <span class="details">Nombre</span> -->
+              <label for="" class="details form-label">Correo</label>
+              <input name="correo" type="email" placeholder="Ingrese un correo" required id="correo">
+            </div>
+            <div class="input-box">
+              <!-- <span class="details">Nombre</span> -->
+              <label for="" class="details form-label">Direccion</label>
+              <input name="direccion" type="text" placeholder="Ingrese una direccion" required id="direccion">
+            </div>
+            <!-- aqui va el boton de si va a estar subcrito -->
+            <div class="input-box">
+              
+              <label for="id_txtSub">Con Subscripcion</label>
+              <input name="subscripcion" type="checkbox" id="botom" value="1">
+            </div>
+            <div class="input-box">
+              <!-- <span class="details">Nombre</span> -->
+              <label for="" class="details form-label">Contraseña</label>
+              <input name="contrasena" id="contraseña" type="password" placeholder="Ingrese una contraseña" required>
+              <br>
+              <br>
+              <button type="button" class="generar-contrasena-btn">Generar contraseña</button>
+              <button type="button" class="ver-contrasena-btn" onclick="mostrarContrasena()">Ver contraseña</button>
+            </div>
+            <div class="input-boxx">
+              <!-- <span class="details">Imagen</span> -->
+             
+              
+              <label for="" class=" details form-label"></label>
+              <img id="preview-image" src="#" alt="Vista previa de la imagen" style="display: none;" width="200px" height="200px">
+              
+              <input name="imagen" id= "imagen" type="file" placeholder="" required>
+              
+            </div>
+            
+          </div>
+          <br>
+          <br>
+          <div class="detalle">
+          <div class="button">
+          <input type="submit" class="submitBtn" value="guardar" id="guardar">
+        </div>
+        
+        <!-- boton qlio sacar -->
+        <div class="button">
+          <input type="submit" class="submitBtn" value=" Nuevo">
+        </div>
+      </div>
+        </form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Rol de usuario</th>
+                    <th>RUT</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Direccion</th>
+                    <th>Sub</th>
+                    <th>Imagen</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+              {% for usuario in usuarios %}
+                <tr>
+                    <td>{{usuario.id}}</td>
+                    {% if usuario.is_superuser %}
+                      <td>Administrador</td>
+                    {% else %}
+                      <td>Cliente</td>
+                    {% endif %}
+                    <td>{{usuario.perfil.rut}}-{{usuario.perfil.dv}}</td>
+                    <td>{{usuario.first_name}}</td>
+                    <td>{{usuario.last_name}}</td>
+                    <td>{{usuario.email}}</td>
+                    <td>{{usuario.perfil.direccion}}</td>
+                    {% if usuario.perfil.subscrito %}
+                      <td>Si</td>
+                    {% else %}
+                      <td>No</td>
+                    {% endif %}
+                    <td>
+                      <img src="{{ usuario.perfil.imagen.url }}" alt="Imagen del producto" width="100px" height="100px">
+                    </td>
+                    
+                    
+                    
+                    <td><a name="" id="" class="btn btn-info" href="{% url 'eliminarusuario' id=usuario.id %}">Eliminar</a>
+                      <a name="" id="" class="btn btn-info" href="{% url 'actualizarusuario' id=usuario.id %}">Editar</a></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+        </table>
+    </div>
+ </div>
+
+ 
+ <!-- hasta aqui el listado -->
+ <!-- y empieza el footer -->
+ <div class="target-div" id="target-div">
+  {% include 'footer.html' %}
+</div>
+{% comment %} <script src="js/footer.js"></script> {% endcomment %}
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="{% static 'js/carrito.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="{% static 'js/tradcucciones.js' %}"></script>
+<script src="js/form_usuario.js"></script>
+
+<script>
+  const inputImage = document.getElementById('imagen');
+  const previewImage = document.getElementById('preview-image');
+
+  inputImage.addEventListener('change', function() {
+    const file = this.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.addEventListener('load', function() {
+        previewImage.src = reader.result;
+        previewImage.style.display = 'block';
+      });
+
+      reader.readAsDataURL(file);
+    } else {
+      previewImage.src = '#';
+      previewImage.style.display = 'none';
+    }
+  });
+</script>
+<script>
+  // Obtener referencia al botón y al campo de contraseña
+  const generarContrasenaBtn = document.querySelector('.generar-contrasena-btn');
+  const contrasenaInput = document.getElementById('contraseña');
+
+  // Agregar un evento de clic al botón
+  generarContrasenaBtn.addEventListener('click', function() {
+    // Asignar la contraseña predefinida al campo de contraseña
+    contrasenaInput.value = 'Duoc@123';
+  });
+</script>
+<script>
+  function mostrarContrasena() {
+    var inputContrasena = document.getElementById("contraseña");
+    if (inputContrasena.type === "password") {
+      inputContrasena.type = "text";
+    } else {
+      inputContrasena.type = "password";
+    }
+  }
+</script>
+
+<!-- aqui termina el footer -->
+</body>
+</html>

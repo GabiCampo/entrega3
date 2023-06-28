@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patitas</title>
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/gerolamo.css">
+    <link rel="stylesheet" href="css/carrito.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="icon" href="img/icon.png">
+
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+  <!-- desde aqui -->
+  <script src="js/nav.js"></script>
+    <div class="card text-center" >
+        
+      <div class="card-header" id="targett-div"></div> 
+            
+    </div> 
+
+ <!-- Carrito -->
+ 
+ <div class="media">
+    <img class="img " src="img/pavo.jpg" alt="Generic placeholder image">
+    <div class="media-body">
+      <h4>BABY CAT & KITTEN</h4>
+      <h6>Nutrique Baby Cat & Kitten es un alimento indicado para gatitos desde el destete</h6>
+      <h6>hasta el año de edad. Formulado con el exclusivo Smart Growth Complex son</h6>
+      <h6>ingredientes naturales que aportan proteínas de gran calidad indispensables para</h6>
+      <h6>esta etapa de la vida en la que el gato cachorro tiene altos requerimientos nutricionales.</h6>
+      <p class="price">Precio: $12.000</p>
+      <button class="agregar-carrito" data-id="1" data-nombre="BABY CAT & KITTEN" data-precio="12000">Agregar al carrito</button>
+  </div>
+    </div>
+ </div>
+  <section id="carrito">
+    <h2>Carrito de compras</h2>
+    <ul id="lista-carrito">
+    </ul>
+
+    <p>Total: $<span id="total"></span></p>
+
+    <button id="vaciar-carrito">Vaciar carrito</button>
+  </section>
+ 
+  <div id="accordion" role="tablist">
+      <div class="card">
+        <div class="card-header" role="tab" id="headingOne">
+          <h5 class="mb-0">
+            <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Beneficios
+            </a>
+          </h5>
+        </div>
+    
+        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+          <div class="card-body">
+            <li>
+                EL PAVO Y EL HUEVO: son ingredientes naturales que aportan proteínas de gran calidad indispensables para esta etapa de la vida en la que el gato cachorro tiene altos requerimientos nutricionales.
+            </li>
+            <li>
+                El DHA proveniente del aceite de raya, es esencial para el desarrollo cognitivo del cachorro. Combinado con aceite de coco, fuente de ácidos grasos de cadena media, contribuye a aumentar la capacidad de aprendizaje y de memoria.
+            </li>
+            <li>
+                Antioxidantes naturales provenientes de blueberries (arándanos azules), zapallo y té verde colaboran en el buen funcionamiento del sistema inmune del cachorro.
+            </li>
+            <li>
+                Probióticos como Lactobacillius y Saccharomyces enriquecen la flora intestinal y al combinarlos con prebióticos promueven un sistema digestivo sano que mejora el aprovechamiento de los nutrientes y aumenta la capacidad de defensa contra bacterias dañinas.
+            </li>
+            <li>
+                El agregado de fibras saludables ayuda a garantizar la regulación del tránsito intestinal.
+            </li>
+            
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingTwo">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Ingredientes
+            </a>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="card-body">
+            Harina de pavo, arroz, hidrolizado de hígado porcino deshidratado, aceite de pollo, huevo en polvo, cebada, arvejas secas, avena, pulpa de remolacha, coco deshidratado, aceite de pescado, aceite de coco, zapallo deshidratado, semillas de chía, sal, taurina, probióticos, extracto de manzanilla, jengibre en polvo, hinojo, extracto de romero, arándanos liofilizados (blueberries), arándanos rojos (cranberries), extractos vegetales naturales (té verde), aceite de raya, fructooligosacáridos. Vitaminas: A, C, D3, E, B 1, B2, B6, B 12, biotina, ácido fálico, niacina, ácido pantoténico, cloruro de colina. Minerales: hierro, cobre, zinc, selenio, manganeso, yodo, calcio.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+          <div class="card-header" role="tab" id="headingThree">
+            <h5 class="mb-0">
+              <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Recomendacion Sugerida
+              </a>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="card-body">
+              Las cantidades presentadas son orientativas y pueden variar según muchos factores.
+            </div>
+          </div>
+        </div>
+    </div>
+     
+  <table class="content-table">
+    <thead class="thead">
+        <tr class="tr">
+            <th class="th">Edad Mascota</th>
+            <th class="th">Tamaño Mascota</th>
+            <th class="th">Categoria</th>
+            <th class="th">Tipo de Producto</th>
+        </tr>
+    </thead>
+    <tbody class="tbody">
+        <tr>
+            <td class="td">Gatito</td>
+            <td class="td">Tamaño Pequeño</td>
+            <td class="td">Premiun</td>
+            <td class="td">Alimento seco</td>
+        </tr>
+    </tbody>
+  </table>
+
+  
+
+<!-- y empieza el footer -->
+<div class="target-div" id="target-div">
+</div>
+<script src="js/footer.js"></script>
+  
+  <!-- aqui termina el footer -->
+  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/producto1_pate.js"></script>
+</body>
+</html>

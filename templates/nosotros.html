@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patitas</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/carrito.css">
+  <link rel="stylesheet" href="{% static 'css/nosotros.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+
+    {% comment %} <script src="js/nav.js"></script> {% endcomment %}
+    <div class="card text-center" >
+        
+      <div class="card-header" id="targett-div">{% include 'index_sin_registrar.html' %}</div> 
+            
+    </div> 
+
+
+
+  <div class="principal">
+    <h1>Nosotros</h1>
+    <h6>Patitas es la tienda online mas completa para mascotas, creada por pet lover! Somos una tienda en linea de mascotas con la mayor variedad de productos y servicios a domicilio, contamos con más de 4.000 productos (alimentos para mascotas como accesorios).</h6>
+    <h6>Nuestro emprendimiento es sin fines de lucro, y estamos dedicados a la manutencion de animales en peligro de maltrato.</h6>
+    <h6>Siempre estamos preocupados por la salud y biniestar de tus macotas y las que cuidamos en nuestra fundacion.</h6>
+    </h6>Tanto tu mascota como las que acogemos son lo mas importante para nosotros. Nos esforzamos dia a dia por dar la mejor experiencia y servivio a los Pet Lovers y para que a tus peluditos no les falte nada de su cuidado y salud</h6>
+    <h6>En Chile, llegamos a todo satiago y proximamente estaremos con cobertura nacional. Tenemos entregas el mismo dia en 3 rutas diferentes para que elijas la que mas te conviene, si pides antes de las 5pm te llega el mismo dia. Tambien tenemos envios nacionales con tiempo de entrega de 3 dias habiles. Contamos con todo medio de pago. </h6>
+    <h6>Desde Patatitas apoyamos y colaboramos organicamente y de forma activa con el rescate y adopcion animal, es por eso que donamos la mayor parte de nuestras ventas mensuales a esta causa. Para nosotros es primordial la integridad y bienestar de las mascotas y por eso te invitamos que seas parte de ello</h6>
+
+  </div>
+  <div class="container">
+    <div class="card" style="width: 17rem;">
+      <img src="{%static 'img/boric.jpg' %}" class="card-img-top" alt="....">
+      <div class="card-body">
+        <h4 class="card-title">Gabriel Boric</h4>
+        <h6>Trabajador explotado</h6>
+        <h6>gabriel.boric@gmail.com</h6>
+      </div>
+    </div>  
+
+    <div class="card" style="width: 17rem;">
+      <img src="{%static 'img/evelyn.jpg' %}" class="card-img-top" alt="....">
+      <div class="card-body">
+        <h4 class="card-title">Evelyn Matthei</h4>
+        <h6>Encargada de Marketing</h6>
+        <h6>evelyn.matthei@gmail.com</h6>
+      </div>
+    </div> 
+    
+    <div class="card" style="width: 17rem; ">
+      <img src="{%static 'img/gloria.jpg' %}" class="card-img-top" alt="....">
+      <div class="card-body">
+        <h4 class="card-title">Gloria Hutt</h4>
+        <h6>Atencion al cliente</h6>
+        <h6>gloria.hutt@gmail.com</h6>
+      </div>
+    </div>  
+  </div>
+
+   
+ <!-- y empieza el footer -->
+ <div class="target-div" id="target-div">{% include 'footer.html' %}
+</div>
+{% comment %} <script src="js/footer.js"></script> {% endcomment %}
+  
+  <!-- aqui termina el footer -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  {% comment %} <script src="js/carrito.js"></script> {% endcomment %}
+</body>
+</html>

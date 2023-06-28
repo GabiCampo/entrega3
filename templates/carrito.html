@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="css/carrito.css">
+  <link rel="stylesheet" href="css/historial_venta.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="css/Carrusel.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="icon" href="img/icon.png">
+</head>
+<body>
+  <script src="js/nav.js"></script>
+    <div class="card text-center" >
+        
+      <div class="card-header" id="targett-div"></div> 
+            
+    </div> 
+  
+ <!--aqui el listado  -->
+ <div class="carda">
+    <!-- <div class="card-header"> listado</div> -->
+    <div class="container ">
+    <form action="" class="form">
+      <h4 class="card-title">Carrito de Compras</h4>
+      <table class="table" id="tabla-productos">
+        <thead>
+          <tr>
+            <th>Categoria</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>% Subscriptor</th>
+            <th>% Oferta</th>
+            <th>% Desc Total</th>
+            <th>Descuentos</th>
+            <th>Precio a Pagar</th>
+            <th>Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Perro</td>
+            <td>Nomade Cachorro 3kg</td>
+            <td>1500</td>
+            <td>5%</td>
+            <td>5%</td>
+            <td>10%</td>
+            <td>150</td>
+            <td>1350</td>
+            <td>
+              <button class="eliminar" onclick="eliminarProducto(event)">Eliminar</button>
+            </td>
+          </tr>
+          <!-- agregar más filas de productos aquí -->
+        </tbody>
+      </table>
+      
+      <p>Subtotal: $<span id="subtotal"></span></p>
+      <p>IVA (19%): $<span id="iva"></span></p>
+      <p>Total sin IVA: $<span id="total-sin-iva"></span></p>
+      <p>Total a pagar: $<span id="total-a-pagar"></span></p>      
+   </div>
+
+   <button onclick="cancelarCompra()">Cancelar compra</button>
+	 <button onclick="pagarCompra()">Pagar</button>
+ </div>
+
+  <div id="alerta-cancelar" class="alerta">
+    <span class="mensaje">Tu compra ha sido cancelada</span>
+    <button class="cerrar" onclick="cerrarAlerta()">X</button>
+  </div>
+
+
+ 
+ <!-- hasta aqui el listado -->
+ <!-- y empieza el footer -->
+ <div class="target-div" id="target-div">
+</div>
+<script src="js/footer.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/carrito_eliminar.js"></script>
+
+  <!-- aqui termina el footer -->
+</body>
+</html>

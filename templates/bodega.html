@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+
+  {% block stylesheet %}
+  {% comment %} <link rel="stylesheet" href="{% static 'css/carrito.css' %}"> {% endcomment %}
+  <link rel="stylesheet" href="{% static 'css/bodega.css' %}">
+  {% endblock stylesheet %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="css/Carrusel.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="icon" href="{% static 'img/icon.png' %}">
+</head>
+<body>
+  {% comment %} <script src="js/nav.js"></script> {% endcomment %}
+    <div class="card text-center" >
+        
+      <div class="card-header" id="targett-div">
+        {% include 'index_sin_registrar.html' %}
+      </div> 
+            
+    </div> 
+
+ 
+ <!--aqui el listado  -->
+ <div class="carda">
+    <!-- <div class="card-header"> listado</div> -->
+    <div class="container ">
+        <h4 class="card-title">Bodega</h4>
+        <br>
+        <br>
+        <!-- <form enctype="multipart/form-data" method="post"> -->
+          <!-- {% csrf_token %} -->
+          <!-- <div class="mb-3">
+            <label for="" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre">
+          </div>
+        </form> -->
+        <form action="" class="formulario" method="post" id="formulario" >
+          {% csrf_token %}
+          <div class="user-details">
+            <div class="input-box">
+              <!-- <span class="details">Nombre</span> -->
+              <label for="" class="details form-label">Categoria</label>
+              <!-- <input type="text" placeholder="Ingrese una categoria" required> -->
+              <select name="categoria" id="categoria-select" class="input" required>
+                <option value="">----</option>
+                {% for c in categorias %}
+                  <option value="{{c.id_categoria}}">{{c.nombre}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="input-box">
+              <!-- <span class="details">Categoria</span> -->
+              <label for="" class=" details form-label">Nombre</label>
+              <!-- <input type="text" placeholder="Seleccione una nombre" required> -->
+              <select name="producto" id="producto-select" class="input">
+                <option value="">----</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <!-- <span class="details">Cantidad</span> -->
+              <label for="" class=" details form-label">Cantidad</label>
+              <input type="number" name="cantidad" placeholder="Ingrese una cantidad" required id="cantidad">
+            </div>
+            
+          </div>
+          <div class="detalle">
+          <div class="button">
+          <button type="submit" class="submitBtn " value="guardar" id="guardar">Guardar</button>
+        </div>
+        
+        
+        <div class="button">
+          <button type="submit" class="submitBtn" id="btn-nuevo">Nuevo</button>
+        </div>
+      </div>
+        </form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Categoria</th>
+                    <th>Nombre</th>
+                    
+                    
+                    <th>Estado</th>
+                    
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+              {% for b in bodegas %}
+                <tr>
+                    <td>{{b.id_bodega}}</td>
+                    <td>{{b.categoria.nombre}}</td>
+                    <td>{{b.producto.nombre}}</td>
+                    
+                    <td>despachado</td>
+                    
+                    <td>
+                      <a name="" id="" class="btn btn-info" href="" role="button">Eliminar</a>
+                    </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+        </table>
+    </div>
+ </div>
+
+ 
+ <!-- hasta aqui el listado -->
+ <!-- y empieza el footer -->
+ <div class="target-div" id="target-div">
+  {% include 'footer.html' %}
+</div>
+{% comment %} <script src="js/footer.js"></script> {% endcomment %}
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<!-- <script src="js/carrito.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="{% static 'js/tradcucciones.js' %}"></script>
+<script src="{% static 'js/formulario_validar.js' %}"></script>
+<script>
+  
+  let selectCategoria = document.getElementById('categoria-select');
+  let productoSelect = document.getElementById('producto-select');
+  let cantidadInput = document.getElementById('cantidad');
+  let btnNuevo = document.getElementById('btn-nuevo');
+
+  btnNuevo.addEventListener('click', () => {
+    selectCategoria.value = undefined;
+    productoSelect.value = undefined;
+    cantidadInput.value = undefined;
+  });
+
+  selectCategoria.addEventListener('change', () => {
+    // obtener el valor seleccionado de la categoría
+    let categoriaId = selectCategoria.value;
+  
+    // realizar una solicitud AJAX para obtener los productos de la categoría seleccionada
+    fetch('/productos/categoria/?categoria_id=' + categoriaId)
+    .then(response => response.json())
+    .then(data => {
+      actualizarProductos(data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  });
+  
+  function actualizarProductos(productos) {
+    productoSelect.innerHTML = '';
+  
+    // agregar las opciones de producto al selector
+    productos.forEach((producto) => {
+      let option = document.createElement('option');
+      option.value = producto.id_producto;
+      option.text = producto.nombre;
+      productoSelect.appendChild(option);
+    });
+  }
+  </script>
+<!-- aqui termina el footer -->
+</body>
+</html>

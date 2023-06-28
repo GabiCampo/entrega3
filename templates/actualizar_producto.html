@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="{% static 'css/carrito.css' %}">
+  <link rel="stylesheet" href="{% static 'css/adminproductos.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="icon" href="{% static 'img/icon.png' %}">
+</head>
+<body>
+  {% comment %} <script src="js/nav.js"></script> {% endcomment %}
+    <div class="card text-center" >
+        
+      <div class="card-header" id="targett-div">
+        {% include 'index_sin_registrar.html' %}
+      </div> 
+            
+    </div> 
+    <!-- <div class="card-body-card "> -->
+ <!--aqui el listado  -->
+ <div class="carda">
+    <!-- <div class="card-header"> listado</div> -->
+    <div class="container ">
+        <h4 class="card-title">Productos</h4>
+        <br>
+        <br>
+        
+        <form action="" class="formulario" method="post" id="formulario" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="user-details">
+            <div class="input-box">
+              <!-- <span class="details">Nombre</span> -->
+              <label for="" class="details form-label">ID</label>
+              <input type="number" name="id_producto" placeholder="Ingrese un ID" required value="{{producto.id_producto}}">
+            </div>
+            <!-- aqui va el rol usuario con botones de opcion en circulo -->
+            <div class="input-box">
+              <!-- <span class="details">Nombre</span> -->
+              <label for="" class="details form-label">Categoria</label>
+              <!-- <input type="text" placeholder="Ingrese una categoria" required> -->
+              <select name="categorias" id="categoria" class="input">
+                <option value="">----</option>
+                {% for c in categorias %}
+                    {% if c.id_categoria == producto.categoria.id_categoria  %}
+                        <option selected value="{{c.id_categoria}}">{{c.nombre}}</option>
+                    {% else %}
+                        <option value="{{c.id_categoria}}">{{c.nombre}}</option>
+                    {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+            <div class="input-box">
+              <!-- <span class="details">Categoria</span> -->
+              <label for="" class=" details form-label">Nombre</label>
+              <input id="nombre" type="text" name="nombre" placeholder="Ingrese un nombre" required value="{{producto.nombre}}">
+            </div>
+            <div class="input-box">
+              <!-- <span class="details">Cantidad</span> -->
+              <label for="" class=" details form-label">Monto</label>
+              <input id="monto" type="number" name="precio" placeholder="Ingrese un monto" required value="{{producto.precio}}">
+            </div>
+            <div class="input-box">
+              <!-- <span class="details">Imagen</span> -->
+              <label for="" class=" details form-label">Descripcion</label>
+              <textarea name="descripcion" id="descripcion" cols="49" rows="5">{{producto.descripcion}}</textarea>
+            </div>
+            {% comment %} <div class="input-box">
+              <!-- <span class="details">Nombre</span> -->
+              <label for="" class="details form-label">Descuento subscriptor</label>
+              <input type="text" placeholder="Ingrese un subscripcion" required id="dessub">
+            </div> {% endcomment %}
+            <div class="input-box">
+              <!-- <span class="details">Nombre</span> -->
+              <label for="" class="details form-label">Descuento oferta</label>
+              <input id= "oferta" type="text" name="oferta" placeholder="Ingrese una oferta" required value="{{producto.oferta}}">
+            </div>
+            <!-- aqui va el boton de si va a estar subcrito -->
+            
+            <div class="input-boxx">
+              <!-- <span class="details">Imagen</span> -->
+              <a href="http://127.0.0.1:8000/media/{{producto.imagen}}" target="_blank">{{producto.imagen}}</a>
+              <input id="image" type="file" name="imagen" >
+            </div>
+            
+          </div>
+          <br>
+          <br>
+          <div class="detalle">
+          <div class="button">
+          <input type="submit" class="submitBtn" value="Guardar" id="guardar">
+        </div>
+      </div>
+    </form>
+</div> 
+            
+</div> 
+
+<div class="target-div" id="target-div">
+        {% include 'footer.html' %}
+</div>
