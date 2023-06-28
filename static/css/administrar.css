@@ -1,0 +1,235 @@
+*{
+    font-family: 'PT Sans Caption', sans-serif;
+    /* display: flex; */
+    
+    
+}
+.card-body-card{
+    width: 100%;
+    background: #6498b1a6;
+    line-height: 0px;
+
+
+}
+
+.card-img-overlay{
+    justify-content:center;
+    display: block;
+    margin-top: 80px;
+    color:rgb(231, 231, 230);
+}
+
+.card-img-overlay h5{
+    font-size: 5rem;
+    color: rgb(104, 116, 129);
+    justify-content:center;
+
+}
+
+.card-img-overlay p{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    justify-content:center;
+
+}   
+
+.body{
+    width: 100%;
+    background: #536ea096;
+}
+
+.titulo{
+    text-align: center;
+    color: rgba(35, 118, 151, 0.842);
+    font-size: 3rem;
+    padding-bottom: 50px;
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 100%;
+    /* max-width: 1400px; */
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 140px;
+}
+
+.portafolio{
+    background: #949fa365;
+}
+/* background para el fondo de los div */
+
+.galeria-port{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.content{
+    max-width: 600px;
+    max-height: 15px;
+    margin: 10px auto;
+    line-height: 28px;
+}
+
+.imagen-port{
+    width: 20%;
+    /* height: 15%; */
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position:absolute;
+    width:100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: rgba(107, 94, 105, 0.301);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 70px;
+}
+.hover-galeria p{
+    color: #fff
+}
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+.card .card-header ul{
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+    
+.card-header .logo img{
+    height: 40px;
+    width: 40px;
+    display: flex;
+} 
+
+/* footer */
+
+footer{
+    background: #6498b1a6;
+    height: auto;
+    width: 100%;
+    padding-top: 14px;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    max-height: 15px;
+    margin: 10px;
+    line-height: 28px; /*separacion entre lineas de texto*/
+    /* font-size: 14px; */
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: rgb(146, 129, 129);
+}
+    
+.socials a img{
+    width: 50px;
+    
+}
+.footer-bottom{
+    width: 100%;
+    padding: 6px 0;
+    text-align: center;
+}
+/* footer end */
+/* aqui el css que afecta a administrar */
+
+.contenedorr{
+    width: auto;
+    height: auto;
+    padding-bottom: 8%;
+    padding-top: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    /* text-align: center; */
+    align-items: center;
+    
+}
+.card-body{
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    display: flex;
+    text-align: center;
+}
+.botoness{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* column-gap: 10%; */
+    gap: 2rem;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* position: relative; */
+    /* cursor: pointer; */
+    /* box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5); */
+    
+}
+.botoness a{
+    display: block;
+    /* margin-left: auto; */
+    /* padding: 15px 30px; */
+    border: none;
+    background-color: #cca59196;
+    color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 19px;
+    /* margin-top: 30px; */
+}
+.botoness a:hover {
+        background-color: #ca4b0b96;
+        transform: translateY(-2px);
+    }
+/* admin end */

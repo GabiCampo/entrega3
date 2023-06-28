@@ -1,0 +1,291 @@
+*{
+    font-family: 'PT Sans Caption', sans-serif;
+}
+.card-body-card{
+    width: 100%;
+    background: #6498b1a6;
+    line-height: 0px;
+
+
+}
+
+
+.card .card-header ul{
+     justify-content: flex-start;
+     display: flex;
+    flex-wrap: wrap;
+
+    
+}
+    
+.card-header .logo img{
+    height: 40px;
+    width: 40px;
+    display: flex;
+} 
+
+/* footer */
+
+footer{
+    background: #6498b1a6;
+    height: auto;
+    width: 100%;
+    padding-top: 14px;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    max-height: 15px;
+    margin: 10px;
+    line-height: 28px; /*separacion entre lineas de texto*/
+    /* font-size: 14px; */
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: rgb(146, 129, 129);
+}
+    
+.socials a img{
+    width: 50px;
+    
+}
+.footer-bottom{
+    width: 100%;
+    padding: 6px 0;
+    text-align: center;
+}
+/* footer end */
+
+.carda {
+    width: 100%;
+    height: 100%;
+    padding-top: 2%;
+    padding-bottom: 8%;
+    
+    
+}
+.table a{
+    display: block;
+    border: none;
+    background-color: #cca59196;
+    color: black;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    
+}
+.table a:hover {
+        background-color: #ca4b0b96;
+        transform: translateY(-2px);
+    }
+
+.table{
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+.submitBtn {
+    display: block;
+    margin-left: auto;
+    padding: 12px 30px;
+    border: none;
+    background-color: #cca59196;
+    color: black;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 16px;
+    /* margin-top: 25px; */
+    /* margin-bottom: 25px; */
+}
+  
+.submitBtn:hover {
+    background-color: #ca4b0b96;
+    transform: translateY(-2px);
+}
+.formulario{
+    /* display: flex; */
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    /* background-image: linear-gradient(to right, rgba(149, 174, 179, 0.418), rgb(133, 169, 175)); */
+    padding-right: 10%;
+    padding-left: 10%;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.294);
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+.container .formulario .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.formulario .user-details .input-box{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: calc(100% / 2 - 30px);
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.4s ease;
+}
+.user-details .input-box .details{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    /* font-weight: 500; */
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: rgb(18, 32, 37);
+}
+
+.button{
+    margin-bottom: 20px;
+}
+/* faltan los botones de subscripcion si/no y el e rol de usuario */
+form .gender-details .gender-title{
+    font-size: 16px;
+}
+form .gender-details .category{
+    display: flex;
+    width: 60%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+.gender-details .category label{
+    display: flex;
+    align-items: center;
+}
+.gender-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background: rgb(211, 208, 211);
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two{
+    border-color: rgb(211, 208, 211);
+    background: #854a22;
+}
+form input[type="radio"]{
+    display: none;
+}
+/* esto es para separar la distancia de los botones de guardar y eliminar */
+.detalle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding-right: 73%;
+    /* activar esta wea */
+}
+/*  */
+form .gender-detailss .gender-title{
+    font-size: 16px;
+}
+form .gender-detailss .categoryy{
+    display: flex;
+    width: 40%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+.gender-detailss .categoryy label{
+    display: flex;
+    align-items: center;
+}
+.gender-detailss .categoryy .dott{
+    height: 18px;
+    width: 18px;
+    background: rgb(211, 208, 211);
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#ot-3:checked ~ .categoryy label .three,
+#ot-4:checked ~ .categoryy label .four{
+    border-color: rgb(211, 208, 211);
+    background: #854a22;
+}
+form input[type="radio"]{
+    display: none;
+}
+.formulario .user-details .input-boxx{
+    margin-top: 55px;
+    margin-bottom: 28px;
+    width: 47%;
+}
+/* chekcox */
+/* Estilos para el checkbox */
+.input-box input[type="checkbox"] {
+    transform: scale(0.6); /* Ajusta el tamaño del checkbox */
+    
+  }
+
+ 
+.generar-contrasena-btn {
+        background-color: #d476c8a1; /* Color de fondo */
+        color: rgb(5, 5, 5); /* Color del texto */
+        padding: 10px 20px; /* Espacio interno */
+        font-size: 16px; /* Tamaño de fuente */
+        border: none; /* Sin borde */
+        cursor: pointer; /* Cambio de cursor al pasar por encima */
+        border-radius: 6px; /* Borde redondeado */
+        transition: background-color 0.4s; /* Transición suave para el color de fondo */
+}
+
+.generar-contrasena-btn:hover {
+        background-color: #9d2c80bd; /* Cambio de color al pasar por encima */
+}
+.ver-contrasena-btn {
+    background-color: #d476c8a1; /* Color de fondo */
+    color: rgb(0, 0, 0); /* Color del texto */
+    padding: 10px 20px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambio de cursor al pasar por encima */
+    border-radius: 6px; /* Borde redondeado */
+    transition: background-color 0.4s; /* Transición suave para el color de fondo */
+}
+
+.ver-contrasena-btn:hover {
+    background-color: #9d2c80bd; /* Cambio de color al pasar por encima */
+}
+
+
+    
